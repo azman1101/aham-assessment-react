@@ -6,15 +6,6 @@ export default ({ h }) => {
 
   useEffect(() => {
     getCustomers();
-    Api({
-      endpoint: endpoints.getCustomer(2),
-      onSuccess: ({ data }) => {
-        console.log('🚀 vv ~ getCustomer:', data);
-      },
-      onFail: (error) => {
-        console.log('🚀 vv ~ error:', error);
-      },
-    });
   }, []);
 
   const getCustomers = () => {
